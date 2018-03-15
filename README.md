@@ -41,7 +41,7 @@ CREATE TABLE `user` (
 
 ## Learning Zefire
 
-Please visit Zefire's website for full documentation with examples and full API documentation.
+Please visit Zefire's website for full [documentation](http://zefire.io/documentation) with examples and full [API documentation](http://zefire.io/api-documentation).
 
 ## Contributing
 
