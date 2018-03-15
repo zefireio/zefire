@@ -1,5 +1,5 @@
 <?php
 
 \Route::get('/', function() {
-	return 'Hello World!';
+	return \View::render('home.index');
 });
