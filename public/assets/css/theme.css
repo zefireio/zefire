@@ -1,0 +1,62 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.logo {
+	height:40px;
+	margin-top: -10px;
+}
+
+.navbar-brand {
+    color: #fff !important;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    color: #fff;
+}
+
+.brand {
+	padding-top: 20px;
+}
+
+.main > p > .btn {
+  margin: 5px 0;  
+}
+
+.main .navbar .container {
+  width: auto;
+}
+
+.footer {
+  background-image: -webkit-linear-gradient(top,#3c3c3c 0,#222 100%);
+  background-image: -o-linear-gradient(top,#3c3c3c 0,#222 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));
+  background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  background-repeat: repeat-x;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  z-index: 1;
+  color: #fff;
+  text-align:center;
+  font-size:11px;
+}
+
+a {
+  color: #ff6500;
+}
+
+a:hover {
+  color: #ff6500;
+  text-decoration: none;
+  background: none;
+}
+
+a:focus {
+  background: none;
+}

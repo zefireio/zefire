@@ -1,0 +1,28 @@
+{
+    "name": "zefireio/zefire",
+    "description": "Zefire Php App",
+    "keywords": ["app", "zefire"],
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zefire",
+            "email": "zefireframework@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "ext-memcached": "*",
+        "zefireio/framework": "*"
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
