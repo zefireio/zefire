@@ -38,6 +38,7 @@ return [
 		'View' 				=> Zefire\View\View::class,
 		'HttpException' 	=> Zefire\Exception\HttpException::class,
 		'Authentication' 	=> Zefire\Authentication\Authentication::class,
+		'Mail' 				=> Zefire\Mail\Mail::class,
 	],
 
 	/*
@@ -76,6 +77,7 @@ return [
 		'View' 			=> Zefire\Aliases\View::class,
 		'HttpException' => Zefire\Aliases\HttpException::class,
 		'Auth' 			=> Zefire\Aliases\Auth::class,
+		'Mail' 			=> Zefire\Aliases\Mail::class,
 	],
 
 	/*
