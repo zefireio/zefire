@@ -23,9 +23,29 @@ return [
     */
 	
 	'disks' => [
-		'local' => [
+        'storage' => [
             'driver'    => 'file',
-            'root'      => \App::storagePath() . 'app' . DIRECTORY_SEPARATOR,
+            'root'      => \App::storagePath() . DIRECTORY_SEPARATOR,
+        ],
+        'logs' => [
+            'driver'    => 'file',
+            'root'      => \App::logPath() . DIRECTORY_SEPARATOR,
+        ],
+        'templates' => [
+            'driver'    => 'file',
+            'root'      => \App::templatePath() . DIRECTORY_SEPARATOR,
+        ],
+        'compiled' => [
+            'driver'    => 'file',
+            'root'      => \App::compiledPath() . DIRECTORY_SEPARATOR,
+        ],
+        'sessions' => [
+            'driver'    => 'file',
+            'root'      => \App::sessionPath() . DIRECTORY_SEPARATOR,
+        ],
+        'local' => [
+            'driver'    => 'file',
+            'root'      => \App::storagePath() . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR,
         ],
         // 's3' => [
         //     'driver'    => 'cloud',
