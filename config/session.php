@@ -20,6 +20,6 @@ return [
     |
     */
 
-    'driver'    => Zefire\Session\DatabaseSessionHandler::class,
+    'driver'    => Zefire\Session\FileSessionHandler::class,
     'life'      => 7200
 ];
