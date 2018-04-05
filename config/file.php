@@ -11,7 +11,7 @@ return [
     |
     */
 
-	'default' => 'local',
+    'default' => 'local',
 
     /*
     |--------------------------------------------------------------------------
@@ -21,39 +21,53 @@ return [
     | Here you may specify all disks mounting points you may require for your
     | application. 2 drivers are available: file and cloud which uses AWS S3.
     */
-	
-	'disks' => [
+    
+    'disks' => [
         'storage' => [
-            'driver'    => 'file',
-            'root'      => \App::storagePath() . DIRECTORY_SEPARATOR,
+            'driver'    => Zefire\FileSystem\FileAdapter::class,
+            'config'    => [
+                'path' => \App::storagePath() . DIRECTORY_SEPARATOR
+            ]
         ],
         'logs' => [
-            'driver'    => 'file',
-            'root'      => \App::logPath() . DIRECTORY_SEPARATOR,
+            'driver'    => Zefire\FileSystem\FileAdapter::class,
+            'config'    => [
+                'path' => \App::logPath() . DIRECTORY_SEPARATOR
+            ]
         ],
         'templates' => [
-            'driver'    => 'file',
-            'root'      => \App::templatePath() . DIRECTORY_SEPARATOR,
+            'driver'    => Zefire\FileSystem\FileAdapter::class,
+            'config'    => [
+                'path' => \App::templatePath() . DIRECTORY_SEPARATOR
+            ]
         ],
         'compiled' => [
-            'driver'    => 'file',
-            'root'      => \App::compiledPath() . DIRECTORY_SEPARATOR,
+            'driver'    => Zefire\FileSystem\FileAdapter::class,
+            'config'    => [
+                'path' => \App::compiledPath() . DIRECTORY_SEPARATOR
+            ]
         ],
         'sessions' => [
-            'driver'    => 'file',
-            'root'      => \App::sessionPath() . DIRECTORY_SEPARATOR,
+            'driver'    => Zefire\FileSystem\FileAdapter::class,
+            'config'    => [
+                'path' => \App::sessionPath() . DIRECTORY_SEPARATOR
+            ]
         ],
         'local' => [
-            'driver'    => 'file',
-            'root'      => \App::storagePath() . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR,
+            'driver'    => Zefire\FileSystem\FileAdapter::class,
+            'config'    => [
+                'path' => \App::storagePath() . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR
+            ]
         ],
         // 's3' => [
-        //     'driver'    => 'cloud',
-        //     'key'       => getenv('AWS_KEY'),
-        //     'secret'    => getenv('AWS_SECRET'),
-        //     'region'    => getenv('AWS_REGION'),
-        //     'version'   => 'latest',
-        //     'bucket'    => '',
+        //     'driver'    => Zefire\FileSystem\S3Adapter::class,
+        //     'config'    => [
+        //         'key'       => getenv('AWS_ACCESS_KEY_ID'),
+        //         'secret'    => getenv('AWS_SECRET_ACCESS_KEY'),
+        //         'region'    => getenv('AWS_REGION'),
+        //         'version'   => 'latest',
+        //         'bucket'    => ''
+        //     ],
         // ],
-	],
+    ],
 ];
