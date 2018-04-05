@@ -12,7 +12,7 @@ return [
     |
     */
 
-	'driver'       => 'beanstalk',
+	'driver'       => Zefire\Queue\PheanstalkHandler::class,
 	'tries'        => 3,
 	'beanstalk'    => '127.0.0.1'
 ];
