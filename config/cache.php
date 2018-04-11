@@ -2,7 +2,7 @@
 
 return [
 
-	/*
+    /*
     |--------------------------------------------------------------------------
     | Drviver
     |--------------------------------------------------------------------------
@@ -10,9 +10,12 @@ return [
     | This value defines which adapter should be used for caching. Default's to
     | "Zefire\Memcache\Memcache" on error or if none specified.
     |
-	|	default: Zefire\Memcache\Memcache
-	|
+    | Handlers:
+    |
+    | Zefire\Memcache\Memcache::class      // Default
+    | Zefire\Redis\Redis::class
+    |
     */
 
-	'driver' => Zefire\Memcache\Memcache::class
+    'driver' => Zefire\Memcache\Memcache::class,
 ];

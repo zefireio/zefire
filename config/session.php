@@ -12,14 +12,16 @@ return [
     | specified. The "life" setting defines how long a session will last
     | before expiring.
     |
-    | Choices:
+    | Handlers:
     |
     | Zefire\Session\FileSessionHandler::class      // Default
     | Zefire\Session\MemcacheSessionHandler::class
+    | Zefire\Session\RedisSessionHandler::class
     | Zefire\Session\DatabaseSessionHandler::class
     |
     */
 
-    'driver'    => Zefire\Session\FileSessionHandler::class,
-    'life'      => 7200
+    'driver'       => Zefire\Session\FileSessionHandler::class,
+    'life'         => 7200,
+    'connection'   => 'mysql1',
 ];
