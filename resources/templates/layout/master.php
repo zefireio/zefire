@@ -30,7 +30,13 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/">Home</a></li>            
+            <li><a href="/">Home</a></li>
+            @if(\Auth::status() === true)
+              <li><a href="/logout">{{ translate('auth.logout') }}</a></li>
+            @else
+              <li><a href="/login">{{ translate('auth.login') }}</a></li>
+              <li><a href="/register">{{ translate('auth.register') }}</a></li>
+            @endif
           </ul>
         </div>
       </div>
